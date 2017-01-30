@@ -23,20 +23,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-rf-Kb8">
-                                <rect key="frame" x="110" y="256" width="155" height="155"/>
+                                <rect key="frame" x="110" y="182" width="155" height="155"/>
                                 <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRd-mK-45d"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-9H-RUg">
-                                <rect key="frame" x="136" y="426" width="102.5" height="21"/>
+                                <rect key="frame" x="136" y="331" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aha-xG-Lgn">
-                                <rect key="frame" x="110" y="466" width="155" height="155"/>
+                                <rect key="frame" x="123" y="378" width="129" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="2Xa-Cu-P0u"/>
+                                    <constraint firstAttribute="width" constant="129" id="obF-sk-R8w"/>
+                                </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="suT-lV-t7u"/>
@@ -46,12 +50,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QLI-rf-Kb8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bw-up-PH9"/>
-                            <constraint firstItem="QLI-rf-Kb8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3m0-e2-LgK"/>
+                            <constraint firstItem="QLI-rf-Kb8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-74" id="3m0-e2-LgK"/>
                             <constraint firstItem="ZfG-9H-RUg" firstAttribute="centerX" secondItem="QLI-rf-Kb8" secondAttribute="centerX" id="MVA-Gc-CUd"/>
-                            <constraint firstItem="aha-xG-Lgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jc4-id-K0R"/>
-                            <constraint firstItem="aha-xG-Lgn" firstAttribute="top" secondItem="ZfG-9H-RUg" secondAttribute="bottom" constant="19" id="kBv-6D-ZoW"/>
+                            <constraint firstItem="aha-xG-Lgn" firstAttribute="top" secondItem="ZfG-9H-RUg" secondAttribute="bottom" constant="26" id="Ses-p8-qmJ"/>
+                            <constraint firstItem="aha-xG-Lgn" firstAttribute="centerX" secondItem="ZfG-9H-RUg" secondAttribute="centerX" id="h4F-ER-dmQ"/>
                             <constraint firstItem="ZfG-9H-RUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lyU-8n-FSO"/>
-                            <constraint firstItem="ZfG-9H-RUg" firstAttribute="top" secondItem="QLI-rf-Kb8" secondAttribute="bottom" constant="15" id="tR5-Fi-Kwy"/>
+                            <constraint firstItem="ZfG-9H-RUg" firstAttribute="top" secondItem="QLI-rf-Kb8" secondAttribute="bottom" constant="-6" id="tR5-Fi-Kwy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jEU-Zp-8XP"/>

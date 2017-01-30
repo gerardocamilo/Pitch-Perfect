@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
+    
+    // MARK: Properties
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var startRecordingButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
@@ -30,6 +31,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         startRecordingButton.isEnabled = false
         stopRecordingButton.isEnabled = true
         
+        //Getting directory where the recorded audio file is going to be written
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         
@@ -85,4 +87,3 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
 }
-
