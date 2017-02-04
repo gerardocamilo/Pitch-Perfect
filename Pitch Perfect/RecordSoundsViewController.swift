@@ -27,9 +27,7 @@ final class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegat
      Does the necessary changes to the UI to reflect we're recording.
     */
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in progress"
-        startRecordingButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
+        configureUI(recording: true);
 
         //Getting directory where the recorded audio file is going to be written
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -50,11 +48,15 @@ final class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegat
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
+    
+    func configureUI(recording: Bool){
+        recordingLabel.text = recording ? "Recording in progress" : "Tap to record"
+        startRecordingButton.isEnabled = !recording
+        stopRecordingButton.isEnabled = recording
+    }
 
     @IBAction func stopRecording(_ sender: Any) {
-        recordingLabel.text = "Tap to record"
-        startRecordingButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
+        configureUI(recording: false);
 
         if audioRecorder.isRecording {
             audioRecorder.stop()
